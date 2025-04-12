@@ -1,0 +1,28 @@
+.movieSwiper{
+    display: flex;
+    justify-content: center;
+    margin-top: 45%;
+    width: 60vw;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+}
+
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 200px;
+}
+
+.slide-img {
+    width: 100%;
+    display: block;  
+  }
+
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 150px; 
+        height: 200px;
+    }
+}
