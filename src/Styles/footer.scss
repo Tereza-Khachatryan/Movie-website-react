@@ -1,0 +1,82 @@
+.footer{
+    background: transparent;
+    padding: 0 0 30px 0;
+    font-size: 14px;
+
+    .footer-top{
+        background: url('../assets/pexels-pavel-danilyuk-7234227.jpg');
+        background-size: contain;
+        border-top: 1px solid var(--primary);
+        border-bottom: 1px solid var(--primary);
+        padding: 60px 0 30px 0;
+
+        .footer-info{
+            margin-bottom: 30px;
+
+            .logo{
+                line-height: 0;
+                margin-bottom: 15px;
+
+                span{
+                    font-size: 30px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    color: #ffffff;
+                    margin-top: 3px;
+                }
+            }
+
+            p{
+                color: #ffffff;
+                font-size: 14px;
+                margin-top: 40px;
+            }
+        }
+
+        .social-links .a{
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            color: #ffffff;
+            line-height: 0;
+            margin-right: 15px;
+            transition: 0.3s;
+            text-decoration: none;
+
+            &:hover{
+                color: var(--primary);
+            }
+        }
+        h4{
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-contact p{
+            line-height: 26px;
+            color: #ffffff;
+        }
+    }
+
+    .copyright{
+        text-align: center;
+        padding-top: 30px;
+        color: #ffffff;
+    }
+
+    .credits{
+        padding-top: 10px;
+        text-align: center;
+        font-size: 13px;
+        color: #ffffff;
+
+        a{
+            text-decoration: none;
+            color: var(--primary);
+        }
+    }
+}

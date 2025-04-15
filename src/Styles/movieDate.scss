@@ -1,27 +1,99 @@
+// .banner .date {
+//     position: relative;
+//     visibility: hidden;
+//     opacity: 0;
+//     transform: scale(0);
+//     transition: 1s;
+//     z-index: 1000;
+//  }
+ 
+//  .banner .date.active {
+//     visibility: visible;
+//     opacity: 1;
+//     transform: scale(1);
+//  }
+ 
+//  .banner .date h2 {
+//     font-family: 'Times New Roman', Times, serif, cursive;
+//     color: #ffffff;
+//     text-transform: uppercase;
+//     font-size: 6rem;
+//     text-align: center;
+//     margin-bottom: 20px;
+//     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+//     -webkit-mask: linear-gradient(#000000 0 0),  linear-gradient(#000000 0 0);
+//     -webkit-mask-clip: text, padding-box;
+//     -webkit-mask-composite: xor;
+//  }
+
+
+
 .banner .date {
-    position: relative;
-    visibility: hidden;
-    opacity: 0;
-    transform: scale(0);
-    transition: 1s;
-    z-index: 1000;
+   margin-top: 60px;
+   position: relative;
+   visibility: hidden;    
+   opacity: 0;            
+   transform: scale(0);   
+   transition: 1s;     
+   z-index: 1000;        
+   display: flex;        
+   justify-content: center;
+   align-items: center;  
+   height: 200px;      
+   width: 100%;         
  }
  
+ // When the .active class is added (for example when movie.active is true)
  .banner .date.active {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
+   visibility: visible;   // Make it visible
+   opacity: 1;            // Fade in
+   transform: scale(1);   // Scale to full size
+   transition: 1s;        // Smooth transition for the scaling
  }
  
+ // Styling for the h2 tag inside .date
  .banner .date h2 {
-    font-family: 'Times New Roman', Times, serif, cursive;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 6rem;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-    -webkit-mask: linear-gradient(#000000 0 0),  linear-gradient(#000000 0 0);
-    -webkit-mask-clip: text, padding-box;
-    -webkit-mask-composite: xor;
+   font-family: 'Times New Roman', Times, serif, cursive;
+   color: #ffffff;
+   text-transform: uppercase;
+   font-size: 6rem;         // Large font size for the date (adjust if needed)
+   text-align: center;      // Center the text
+   margin-bottom: 20px;     // Space below the text
+   text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); // Glowing text effect
+   
+   /* Keep the original masking effect but fix visibility */
+   -webkit-mask: linear-gradient(#000000 0 0), linear-gradient(#000000 0 0);  // Adjusted to work better
+   -webkit-mask-clip: text, padding-box;
+   -webkit-mask-composite: xor;
+ 
+   /* Border styling for the text (white border) */
+   border: 2px solid #ffffff;  // White border (this could be added if you want to give a border effect)
+   padding: 10px;
+   border-radius: 5px;
+ 
+   /* Prevent overflow of text */
+   word-wrap: break-word;
+   overflow-wrap: break-word;
  }
+ 
+ // Optional: Animation for pulsing glow effect (if you want it to glow when active)
+ .banner .date.active h2 {
+   animation: pulse 1.5s infinite; // Pulse effect when active
+ }
+ 
+ @keyframes pulse {
+   0%, 100% {
+     text-shadow: 0 0 10px #ffffff;  // White glow effect
+   }
+   50% {
+     text-shadow: 0 0 20px #ffffff;  // Larger glow at 50% of the animation cycle
+   }
+ }
+ 
+ // Media query for responsive design (optional, to adjust on smaller screens)
+ @media (max-width: 768px) {
+   .banner .date h2 {
+     font-size: 4rem; // Smaller font on mobile devices
+   }
+ }
+ 

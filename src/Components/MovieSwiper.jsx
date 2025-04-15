@@ -34,7 +34,7 @@ function MovieSwiper ({ slides, slideChange }) {
                             <img 
                                 onClick={() => {slideChange(slide._id)}}
                                 className="slide-img" 
-                                src={`../src${slide.previewImg}`} 
+                                src={slide.previewImg} 
                                 alt={slide.title}/>
                         </SwiperSlide>
                     )

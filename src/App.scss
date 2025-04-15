@@ -17,3 +17,13 @@ body{
 body::-webkit-scrollbar{
     display: none;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+#trend,
+#schedule,
+#blogs {
+    scroll-margin-top: 120px; // match your fixed header height
+  }
