@@ -1,4 +1,5 @@
 .banner .trailer{
+    margin-top: 15px;
     position: relative;
     visibility: hidden;
     opacity: 0;
@@ -17,6 +18,10 @@
     visibility: visible;
     opacity: 1;
     transform: scale(1);
+
+    @media(max-width:998px){
+        margin-top: 0;
+    }
  }
 
 .banner .playBtn{

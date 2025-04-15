@@ -1,5 +1,4 @@
 import React, { useState} from "react";
-import "../Styles/blog.scss"
 import blogData from '../data/blogData.json'
 import BlogCard from "./BlogCard";
 

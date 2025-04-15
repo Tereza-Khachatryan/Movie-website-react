@@ -1,8 +1,8 @@
 .banner .content {
     position: relative;
-    padding: 10px;
+    padding: 5px;
     max-width: 550px;
-    height: 80%;
+    height: 40%;
     visibility: hidden;
     opacity: 0;
     transform: scale(0);
@@ -14,10 +14,18 @@
     visibility: visible;
     opacity: 1;
     transform: scale(1);
+
+    @media(max-width:992px){
+     padding-top: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    }
  }
  
  .movie-title {
-    max-width: 250px;
+    max-width: 200px;
     margin-bottom: 20px;
  }
  
@@ -25,6 +33,10 @@
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
     font-size: 30px;
+
+    @media(max-width:999px){
+      font-size: 20px;
+    }
  }
  
  .content h4 span {
@@ -50,4 +62,5 @@
  
  .banner .content p {
     color: #ffffff;
+    margin-bottom: 5px;
  }
