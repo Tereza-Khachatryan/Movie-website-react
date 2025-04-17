@@ -61,9 +61,18 @@
    justify-content: center;
 
    @media(max-width: 1080px){
+      margin-top: 5vh;
       display: flex;
       justify-content: center;
       align-items: center;
       padding-top: 20%;
+   }
+ }
+
+ .col-lg-6{
+   @media(max-width:991px){
+      margin-left: 50px;
+      display: flex;
+      align-items: center;
    }
  }

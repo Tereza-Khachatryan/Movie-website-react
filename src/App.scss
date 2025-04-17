@@ -26,4 +26,8 @@ html{
 #schedule,
 #blogs {
     scroll-margin-top: 120px; // match your fixed header height
+    
+    @media(max-width:793px){
+        margin-left: 50px;
+      }
   }

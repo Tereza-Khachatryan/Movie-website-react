@@ -8,6 +8,7 @@ import Button from "./Button"
 
 function Header ({ scroll }) {
     const [navList, setNavList] = useState(navListData)
+    const [openMenu, setOpenMenu] = useState(false)
 
     const handleNavOnClick = id => {
         const newNavList = navList.map(nav => ({
@@ -15,24 +16,37 @@ function Header ({ scroll }) {
           active: nav._id === id
         }));
         setNavList(newNavList);
+        setOpenMenu(false)
       };
+
+      const toggleMenu = () => setOpenMenu(!openMenu)
+
     return (
-        <header className={`${scroll > 100 ? 'scrolled' : undefined}`}>
-            <a href="/" className="logo">Cinema</a>
-            <ul className="nav">
-                {
-                    navList.map(nav => {
-                        return (
-                        <NavListItem key={nav._id} nav={nav} navOnClick={handleNavOnClick}/>
-                        )
-                    })
-                }
-            </ul>
-            <Search />
-            <Button 
-                name="Sign in"
-            />
+        <>
+            <header className={`${scroll > 100 ? 'scrolled' : undefined}`}>
+                <div className={`burger ${openMenu ? 'open' : ''}`} onClick={toggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <a href="/" className="logo">Cinema</a>
+
+                <ul className={`nav ${openMenu ? 'open' : ''}`}>
+                    {
+                        navList.map(nav => {
+                            return (
+                            <NavListItem key={nav._id} nav={nav} navOnClick={handleNavOnClick}/>
+                            )
+                        })
+                    }
+                </ul>
+                <Search />
+                <Button 
+                    name="Sign in"
+                />
         </header>
+        </>
     )
 }
 

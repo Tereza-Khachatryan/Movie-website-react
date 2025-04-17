@@ -16,11 +16,12 @@
     transform: scale(1);
 
     @media(max-width:992px){
-     padding-top: 20px;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
      align-items: center;
+    }
+
+    @media(max-width:793px){
+      margin-top: 50px;
+      margin-left: 50px;
     }
  }
  
